@@ -1,0 +1,25 @@
+class BinaryToDec{
+
+    public static void binary(int n)
+    {
+        int sum=0;
+        int pow=0;
+
+        while(n!=0)
+        {
+            int lastD = n%10;
+
+            sum = sum + (lastD*Math.pow(2,pow));
+
+            n = n/10;
+
+            pow++;
+        }
+
+        System.out.println("Decimal Number is : "+sum);
+    }
+  public static void main(String arg[])
+  {
+    binary(101);
+  }
+}
